@@ -1,0 +1,36 @@
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.display{
+    display: flex;
+    flex-direction: row;
+}
+@mixin letterStyle ($sz, $let, $col) {
+    font-size: $sz;
+    letter-spacing: $let;
+    color: $col;     
+}
+$color_greenLite:  rgb(62, 209, 185);
+$color_greyLite: whitesmoke;
+$color_white: white;
+@mixin respons($breakpoint) {
+    @if $breakpoint == "small" {
+      @media (max-width: 1400px) {
+        @content;
+      }
+    }
+  
+    @else if $breakpoint == "medium" {
+      @media (max-width: 1200px) {
+        @content;
+      }
+    }
+  
+    @else if $breakpoint == "large" {
+      @media (max-width: 992px) {
+        @content;
+      }
+    }
+  }

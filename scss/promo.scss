@@ -1,0 +1,32 @@
+@import "./variables.scss";
+
+.promo{
+    padding-top: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 800px;
+    &_title{
+        padding-top: 0;
+        font-weight:300;
+        font-size: 75px
+    }
+        &_item{
+            @extend .display;
+            flex-wrap: wrap;
+            padding-top: 55px;
+            &_img{
+                height: 100px;
+                max-width: 550px;
+                overflow: hidden;
+                padding-left: 65px;
+                &_effect:hover{
+                    transition: all ease 0.2s;
+                    height: 1000px;
+                    width: 1000px;
+                }
+            }
+        }
+}
